@@ -1,4 +1,4 @@
-import { type TranscriptEntry } from "@paperclipai/adapter-utils";
+import { type TranscriptEntry } from "@fightforgeai/adapter-utils";
 
 function safeJsonParse(text: string): unknown {
   try {

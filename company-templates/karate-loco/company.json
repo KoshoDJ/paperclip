@@ -1,0 +1,50 @@
+{
+  "name": "Karate Loco",
+  "tagline": "The #1 martial arts marketing agency for combat sports schools",
+  "type": "agency",
+  "mission": "Make Karate Loco the #1 martial arts marketing agency in North America by delivering measurable local search dominance and conversion-optimized HTML/CSS websites to 100 combat sports schools, generating $500K ARR by end of 2027.",
+  "goals": [
+    "Generate 20+ qualified school owner leads per month",
+    "Onboard 2 new clients per month by Q3 2026",
+    "Deploy each client in under 48 hours using FightForge templates",
+    "Achieve 40%+ AI visibility score for all active clients within 6 months",
+    "Maintain client churn below 5% monthly"
+  ],
+  "board": "Darryl James (Sigung)",
+  "agents": [
+    { "role": "ceo",            "model": "claude-sonnet-4-6", "heartbeat_hours": 24,  "budget_usd": 60  },
+    { "role": "cmo",            "model": "claude-sonnet-4-6", "heartbeat_hours": 12,  "budget_usd": 40  },
+    { "role": "coo",            "model": "claude-sonnet-4-6", "heartbeat_hours": 12,  "budget_usd": 30  },
+    { "role": "seo-analyst",    "model": "claude-sonnet-4-6", "heartbeat_hours": 8,   "budget_usd": 50  },
+    { "role": "content-writer", "model": "claude-sonnet-4-6", "heartbeat_hours": 8,   "budget_usd": 40  },
+    { "role": "core30-audit",   "model": "claude-sonnet-4-6", "heartbeat_hours": null,"budget_usd": 35  },
+    { "role": "schema-tech",    "model": "claude-sonnet-4-6", "heartbeat_hours": null,"budget_usd": 35  },
+    { "role": "ux-ui",          "model": "claude-sonnet-4-6", "heartbeat_hours": null,"budget_usd": 40  },
+    { "role": "citation",       "model": "claude-sonnet-4-6", "heartbeat_hours": 720, "budget_usd": 30  },
+    { "role": "aeo-geo",        "model": "claude-sonnet-4-6", "heartbeat_hours": 168, "budget_usd": 40  }
+  ],
+  "monthly_budget_total_usd": 400,
+  "governance": {
+    "board_approvals_required": [
+      "Hiring any new agent",
+      "Increasing any agent budget by more than 20%",
+      "Any external-facing client deliverable (site launch, schema deploy, GBP update)",
+      "CEO strategy changes affecting delivery timelines",
+      "New client onboarding (scope and pricing approval)"
+    ]
+  },
+  "delivery_model": {
+    "websites": "Hand-coded HTML/CSS on AWS S3 + CloudFront",
+    "crm": "GoHighLevel (CRM, calendar embeds, automations only — never website host)",
+    "seo_intelligence": "SearchScope (StackEngine)",
+    "ai_visibility": "CitationScope (StackEngine)",
+    "seo_data": "DataForSEO MCP",
+    "data_layer": "Airtable",
+    "deployment_target_hours": 48
+  },
+  "combat_sports": [
+    "Karate", "Kajukenbo", "Kosho-Ryu", "BJJ", "MMA",
+    "Muay Thai", "Boxing", "Kickboxing", "Wrestling", "Judo",
+    "Kung Fu", "Taekwondo", "Self-Defense"
+  ]
+}

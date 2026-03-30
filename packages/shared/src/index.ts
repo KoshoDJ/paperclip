@@ -312,7 +312,7 @@ export type {
   PluginLauncherDeclaration,
   PluginMinimumHostVersion,
   PluginUiDeclaration,
-  PaperclipPluginManifestV1,
+  FightForgePluginManifestV1,
   PluginRecord,
   PluginStateRecord,
   PluginConfig,
@@ -572,7 +572,7 @@ export {
 } from "./project-mentions.js";
 
 export {
-  paperclipConfigSchema,
+  fightforgeConfigSchema,
   configMetaSchema,
   llmConfigSchema,
   databaseBackupConfigSchema,
@@ -585,7 +585,7 @@ export {
   storageLocalDiskConfigSchema,
   storageS3ConfigSchema,
   secretsLocalEncryptedConfigSchema,
-  type PaperclipConfig,
+  type FightForgeConfig,
   type LlmConfig,
   type DatabaseBackupConfig,
   type DatabaseConfig,

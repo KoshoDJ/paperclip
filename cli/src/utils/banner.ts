@@ -9,9 +9,9 @@ const PAPERCLIP_ART = [
   "╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝     ",
 ] as const;
 
-const TAGLINE = "Open-source orchestration for zero-human companies";
+const TAGLINE = "Open-source AI operating system for combat sports businesses";
 
-export function printPaperclipCliBanner(): void {
+export function printFightForgeCliBanner(): void {
   const lines = [
     "",
     ...PAPERCLIP_ART.map((line) => pc.cyan(line)),

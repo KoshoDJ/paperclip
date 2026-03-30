@@ -1,0 +1,56 @@
+{
+  "company_type": "client",
+  "client_of": "Karate Loco",
+  "status": "internal_reference_client",
+  "variables": {
+    "SCHOOL_NAME": "James Martial Arts Academy",
+    "SCHOOL_SHORT_NAME": "James Martial Arts",
+    "PRIMARY_STYLE": "Kajukenbo",
+    "SECONDARY_STYLE": "Kosho-Ryu",
+    "CITY": "El Cajon",
+    "STATE": "CA",
+    "ZIP": "92020",
+    "PHONE": "(833) 894-0191",
+    "PHONE_INTL": "+1-833-894-0191",
+    "ADDRESS": "2356 Fletcher Pkwy",
+    "ADDRESS_FULL": "2356 Fletcher Pkwy, El Cajon, CA 92020",
+    "WEBSITE": "https://jamesmartialartsacademy.com",
+    "BLOG_URL": "https://blog.jamesmartialartsacademy.com",
+    "INSTRUCTOR_NAME": "Sigung Darryl James",
+    "INSTRUCTOR_FIRST": "Sigung",
+    "INSTRUCTOR_LAST": "James",
+    "INSTRUCTOR_RANK_PRIMARY": "6th-Degree Black Belt in Kajukenbo",
+    "INSTRUCTOR_RANK_SECONDARY": "3rd-Degree Black Belt in Kosho-Ryu",
+    "INSTRUCTOR_EXPERIENCE_YEARS": "36+",
+    "FOUNDING_YEAR": "2010",
+    "STUDENT_COUNT": "500+",
+    "GTM_ID": "GTM-WQBVK6L",
+    "PRIMARY_COLOR": "#0E1012",
+    "ACCENT_COLOR": "#C9A84C",
+    "SURFACE_COLOR": "#F0EBE0",
+    "FONT_HEADING": "Playfair Display",
+    "FONT_UI": "Montserrat",
+    "FONT_BODY": "Lora",
+    "BORDER_RADIUS": "18px",
+    "NAICS": "713940",
+    "GBP_URL": "https://maps.google.com/?cid=YOUR_CID_HERE",
+    "YELP_URL": "https://www.yelp.com/biz/james-martial-arts-academy-el-cajon",
+    "FACEBOOK_URL": "https://www.facebook.com/JamesMAA"
+  },
+  "programs": [
+    { "name": "Preschool Martial Arts", "ages": "3-5",  "slug": "preschool-martial-arts", "nickname": "Kosho Cubs" },
+    { "name": "Kids Martial Arts",      "ages": "6-9",  "slug": "kids-martial-arts",      "nickname": "Leopards"   },
+    { "name": "Preteen Martial Arts",   "ages": "10-12","slug": "preteen-martial-arts",   "nickname": "Tigers"     },
+    { "name": "Teen Martial Arts",      "ages": "13-17","slug": "teen-martial-arts",      "nickname": "Dragons"    },
+    { "name": "Adult Martial Arts",     "ages": "17+",  "slug": "adult-martial-arts",     "nickname": null         },
+    { "name": "Women's Self-Defense",   "ages": "17+",  "slug": "womens-self-defense",    "nickname": null         }
+  ],
+  "service_area_cities": [
+    "El Cajon", "La Mesa", "Spring Valley", "Rancho San Diego",
+    "Santee", "Lemon Grove", "Lakeside", "Alpine"
+  ],
+  "awards": ["USA Martial Arts Hall of Fame Inductee"],
+  "agents_active": [
+    "seo-analyst", "content-writer", "schema-tech", "citation", "aeo-geo", "ux-ui"
+  ]
+}

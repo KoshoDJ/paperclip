@@ -4,9 +4,9 @@ import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import {
   ensureAgentJwtSecret,
-  mergePaperclipEnvEntries,
+  mergeFightForgeEnvEntries,
   readAgentJwtSecretFromEnv,
-  readPaperclipEnvEntries,
+  readFightForgeEnvEntries,
   resolveAgentJwtEnvFile,
 } from "../config/env.js";
 import { agentJwtSecretCheck } from "../checks/agent-jwt-secret-check.js";
@@ -14,7 +14,7 @@ import { agentJwtSecretCheck } from "../checks/agent-jwt-secret-check.js";
 const ORIGINAL_ENV = { ...process.env };
 
 function tempConfigPath(): string {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "paperclip-jwt-env-"));
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "fightforge-jwt-env-"));
   const configDir = path.join(dir, "custom");
   fs.mkdirSync(configDir, { recursive: true });
   return path.join(configDir, "config.json");
@@ -65,15 +65,15 @@ describe("agent jwt env helpers", () => {
     const configPath = tempConfigPath();
     const envPath = resolveAgentJwtEnvFile(configPath);
 
-    mergePaperclipEnvEntries(
+    mergeFightForgeEnvEntries(
       {
-        PAPERCLIP_WORKTREE_COLOR: "#439edb",
+        FIGHTFORGE_WORKTREE_COLOR: "#439edb",
       },
       envPath,
     );
 
     const contents = fs.readFileSync(envPath, "utf-8");
-    expect(contents).toContain('PAPERCLIP_WORKTREE_COLOR="#439edb"');
-    expect(readPaperclipEnvEntries(envPath).PAPERCLIP_WORKTREE_COLOR).toBe("#439edb");
+    expect(contents).toContain('FIGHTFORGE_WORKTREE_COLOR="#439edb"');
+    expect(readFightForgeEnvEntries(envPath).FIGHTFORGE_WORKTREE_COLOR).toBe("#439edb");
   });
 });

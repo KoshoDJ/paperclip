@@ -1,52 +1,30 @@
+# Environment — never commit secrets
+.env
+.env.local
+.env.*.local
+
+# FightForge instance data — local only
+.fightforge/
+~/.fightforge/
+
+# Paperclip runtime
 node_modules/
 dist/
-.env
+.turbo/
 *.tsbuildinfo
-drizzle/meta/
-.vite/
-coverage/
+
+# pnpm lockfile — managed by CI per upstream policy
+pnpm-lock.yaml
+
+# OS
 .DS_Store
-data/
-.paperclip/
-.pnpm-store/
-tmp-*
-cli/tmp/
+Thumbs.db
 
-# Scratch/seed scripts (but not scripts/ dir)
-check-*.mjs
-!scripts/check-*.mjs
-new-agent*.json
-newcompany.json
-seed-*.mjs
-server/check-*.mjs
-server/seed-*.mjs
-packages/db/seed-*.mjs
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
 
-# npm publish build artifacts
-cli/package.dev.json
-
-# Build artifacts in src directories
-server/src/**/*.js
-server/src/**/*.js.map
-server/src/**/*.d.ts
-server/src/**/*.d.ts.map
-tmp/
-
-# Editor / tool temp files
-*.tmp
-.vscode/
-.claude/settings.local.json
-.paperclip-local/
-/.idea/
-/.agents/
-
-# Doc maintenance cursor
-.doc-review-cursor
-
-# Playwright
-tests/e2e/test-results/
-tests/e2e/playwright-report/
-tests/release-smoke/test-results/
-tests/release-smoke/playwright-report/
-.superset/
-.claude/worktrees/
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,49 @@
+{
+  "_instructions": "Copy this file to company-templates/[client-slug]/client-config.json and fill in all values. Delete this _instructions field before use.",
+  "company_type": "client",
+  "client_of": "Karate Loco",
+  "status": "onboarding",
+  "variables": {
+    "SCHOOL_NAME": "",
+    "SCHOOL_SHORT_NAME": "",
+    "PRIMARY_STYLE": "",
+    "SECONDARY_STYLE": "",
+    "CITY": "",
+    "STATE": "",
+    "ZIP": "",
+    "PHONE": "",
+    "PHONE_INTL": "",
+    "ADDRESS": "",
+    "ADDRESS_FULL": "",
+    "WEBSITE": "",
+    "BLOG_URL": "",
+    "INSTRUCTOR_NAME": "",
+    "INSTRUCTOR_FIRST": "",
+    "INSTRUCTOR_LAST": "",
+    "INSTRUCTOR_RANK_PRIMARY": "",
+    "INSTRUCTOR_RANK_SECONDARY": "",
+    "INSTRUCTOR_EXPERIENCE_YEARS": "",
+    "FOUNDING_YEAR": "",
+    "STUDENT_COUNT": "",
+    "GTM_ID": "",
+    "PRIMARY_COLOR": "",
+    "ACCENT_COLOR": "",
+    "SURFACE_COLOR": "",
+    "FONT_HEADING": "Playfair Display",
+    "FONT_UI": "Montserrat",
+    "FONT_BODY": "Lora",
+    "BORDER_RADIUS": "18px",
+    "NAICS": "713940",
+    "GBP_URL": "",
+    "YELP_URL": "",
+    "FACEBOOK_URL": ""
+  },
+  "programs": [
+    { "name": "", "ages": "", "slug": "", "nickname": null }
+  ],
+  "service_area_cities": [],
+  "awards": [],
+  "agents_active": [
+    "seo-analyst", "content-writer", "schema-tech", "citation", "aeo-geo", "ux-ui"
+  ]
+}

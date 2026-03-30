@@ -8,45 +8,45 @@ const ORIGINAL_ENV = { ...process.env };
 describe("applyDataDirOverride", () => {
   beforeEach(() => {
     process.env = { ...ORIGINAL_ENV };
-    delete process.env.PAPERCLIP_HOME;
+    delete process.env.FIGHTFORGE_HOME;
     delete process.env.PAPERCLIP_CONFIG;
     delete process.env.PAPERCLIP_CONTEXT;
-    delete process.env.PAPERCLIP_INSTANCE_ID;
+    delete process.env.FIGHTFORGE_INSTANCE_ID;
   });
 
   afterEach(() => {
     process.env = { ...ORIGINAL_ENV };
   });
 
-  it("sets PAPERCLIP_HOME and isolated default config/context paths", () => {
+  it("sets FIGHTFORGE_HOME and isolated default config/context paths", () => {
     const home = applyDataDirOverride({
-      dataDir: "~/paperclip-data",
+      dataDir: "~/fightforge-data",
       config: undefined,
       context: undefined,
     }, { hasConfigOption: true, hasContextOption: true });
 
-    const expectedHome = path.resolve(os.homedir(), "paperclip-data");
+    const expectedHome = path.resolve(os.homedir(), "fightforge-data");
     expect(home).toBe(expectedHome);
-    expect(process.env.PAPERCLIP_HOME).toBe(expectedHome);
+    expect(process.env.FIGHTFORGE_HOME).toBe(expectedHome);
     expect(process.env.PAPERCLIP_CONFIG).toBe(
       path.resolve(expectedHome, "instances", "default", "config.json"),
     );
     expect(process.env.PAPERCLIP_CONTEXT).toBe(path.resolve(expectedHome, "context.json"));
-    expect(process.env.PAPERCLIP_INSTANCE_ID).toBe("default");
+    expect(process.env.FIGHTFORGE_INSTANCE_ID).toBe("default");
   });
 
   it("uses the provided instance id when deriving default config path", () => {
     const home = applyDataDirOverride({
-      dataDir: "/tmp/paperclip-alt",
+      dataDir: "/tmp/fightforge-alt",
       instance: "dev_1",
       config: undefined,
       context: undefined,
     }, { hasConfigOption: true, hasContextOption: true });
 
-    expect(home).toBe(path.resolve("/tmp/paperclip-alt"));
-    expect(process.env.PAPERCLIP_INSTANCE_ID).toBe("dev_1");
+    expect(home).toBe(path.resolve("/tmp/fightforge-alt"));
+    expect(process.env.FIGHTFORGE_INSTANCE_ID).toBe("dev_1");
     expect(process.env.PAPERCLIP_CONFIG).toBe(
-      path.resolve("/tmp/paperclip-alt", "instances", "dev_1", "config.json"),
+      path.resolve("/tmp/fightforge-alt", "instances", "dev_1", "config.json"),
     );
   });
 
@@ -55,7 +55,7 @@ describe("applyDataDirOverride", () => {
     process.env.PAPERCLIP_CONTEXT = "/env/context.json";
 
     applyDataDirOverride({
-      dataDir: "/tmp/paperclip-alt",
+      dataDir: "/tmp/fightforge-alt",
       config: "/flag/config.json",
       context: "/flag/context.json",
     }, { hasConfigOption: true, hasContextOption: true });
@@ -67,12 +67,12 @@ describe("applyDataDirOverride", () => {
   it("only applies defaults for options supported by the command", () => {
     applyDataDirOverride(
       {
-        dataDir: "/tmp/paperclip-alt",
+        dataDir: "/tmp/fightforge-alt",
       },
       { hasConfigOption: false, hasContextOption: false },
     );
 
-    expect(process.env.PAPERCLIP_HOME).toBe(path.resolve("/tmp/paperclip-alt"));
+    expect(process.env.FIGHTFORGE_HOME).toBe(path.resolve("/tmp/fightforge-alt"));
     expect(process.env.PAPERCLIP_CONFIG).toBeUndefined();
     expect(process.env.PAPERCLIP_CONTEXT).toBeUndefined();
   });
